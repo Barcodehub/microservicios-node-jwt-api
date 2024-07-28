@@ -71,7 +71,7 @@ docker-compose up --build
 ## API Testing
 For testing the API endpoints, we provide a Thunder Client collection.
 
--Download the Thunder Client test collection by clicking [here](thunder-collection_microservices-app).
+-Download the Thunder Client test collection by clicking [here](thunder-collection_microservices-app.json).
 
 -Install the Thunder Client extension in Visual Studio Code if you haven't already.
 
