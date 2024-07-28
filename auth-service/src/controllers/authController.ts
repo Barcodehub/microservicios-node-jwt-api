@@ -1,7 +1,30 @@
 import { Request, Response } from 'express';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import pool from '../config/database';
+
+
+//admin por default  -> implementar luego cambio obligatorio de contraseña, emails
+export const initializeDatabase = async () => {
+  try {
+    // Verifica y crea usuario administrador si no existe
+    const adminUserResult = await pool.query("SELECT * FROM users WHERE username = $1", ['admin']);
+    if (adminUserResult.rowCount === 0) {
+      const hashedPassword = await bcrypt.hash('adminpassword', 10);
+      await pool.query(
+        "INSERT INTO users (username, password, role_id) VALUES ($1, $2, (SELECT id FROM roles WHERE name = 'admin'))",
+        ['admin', hashedPassword]
+      );
+      console.log("Admin user created with default password.");
+    }
+  } catch (error) {
+    console.error("Error initializing database:", error);
+  }
+};
+
+
+
+
 
 export const register = async (req: Request, res: Response) => {
   const { username, password } = req.body;

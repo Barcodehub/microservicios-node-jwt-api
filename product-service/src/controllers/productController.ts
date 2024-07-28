@@ -6,7 +6,9 @@ export const getProducts = async (req: Request, res: Response) => {
     const { rows } = await pool.query('SELECT * FROM products');
     res.json(rows);
   } catch (error) {
-    res.status(500).json({ message: "Error fetching products" });
+    console.log("holaaa")
+    console.error('Error details:', error);
+    res.status(500).json({ message: "Error fetching products", error: error instanceof Error ? error.message : String(error) });
   }
 };
 

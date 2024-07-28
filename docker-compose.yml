@@ -1,4 +1,4 @@
-version: '3'
+#version: '3'
 services:
   postgres:
     image: postgres:13
@@ -8,9 +8,12 @@ services:
       POSTGRES_DB: ${DB_NAME}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./init_db.sql:/docker-entrypoint-initdb.d/init_db.sql   #docker-compose down -v
 
   auth-service:
     build: ./auth-service
+    ports:
+    - "3001:3001" # Agrega esta línea para mapear el puerto
     environment:
       DB_USER: ${DB_USER}
       DB_HOST: postgres
@@ -23,6 +26,8 @@ services:
 
   product-service:
     build: ./product-service
+    ports:
+    - "3002:3002" # Agrega esta línea para mapear el puerto
     environment:
       DB_USER: ${DB_USER}
       DB_HOST: postgres
