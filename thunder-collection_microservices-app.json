@@ -1,0 +1,157 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "microservices-app",
+    "collectionId": "39ffd045-4858-4511-afe0-1a4f78c5b3ff",
+    "dateExported": "2024-07-28T05:28:38.925Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "5c4ed7db-5553-449e-8322-74c1db21ac39",
+            "colId": "39ffd045-4858-4511-afe0-1a4f78c5b3ff",
+            "containerId": "",
+            "name": "listar products",
+            "url": "http://localhost:3002",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-07-28T03:28:32.878Z",
+            "modified": "2024-07-28T05:16:54.341Z",
+            "headers": []
+        },
+        {
+            "_id": "39bd2c6a-c732-4018-8f7c-e20a96e841af",
+            "colId": "39ffd045-4858-4511-afe0-1a4f78c5b3ff",
+            "containerId": "",
+            "name": "register user",
+            "url": "http://localhost:3001/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-07-28T03:28:40.842Z",
+            "modified": "2024-07-28T05:26:39.105Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"user2\",\n  \"password\": \"userpassword\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "375339cb-e561-4f63-8fd9-dbda6f26f5fa",
+            "colId": "39ffd045-4858-4511-afe0-1a4f78c5b3ff",
+            "containerId": "",
+            "name": "search product",
+            "url": "http://localhost:3002/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-07-28T05:18:26.019Z",
+            "modified": "2024-07-28T05:19:10.959Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMTQzOTMyLCJleHAiOjE3MjIyMzAzMzJ9.ZwcqGa3gSf3XjHX74w2sGM7S-m-0r6OsIsV-w9TjQrU"
+                }
+            ]
+        },
+        {
+            "_id": "df2adc86-bff5-49c3-ad8c-2865905c4bdd",
+            "colId": "39ffd045-4858-4511-afe0-1a4f78c5b3ff",
+            "containerId": "",
+            "name": "Create product",
+            "url": "http://localhost:3002",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-07-28T05:19:31.576Z",
+            "modified": "2024-07-28T05:20:55.583Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMTQ0MDA4LCJleHAiOjE3MjIyMzA0MDh9.y0-62zIkNy0QrFLMGMCOEgyAzu0jsIiy5rwv7jhk5TA"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"code\": \"P33\",\n  \"description\": \"Producto z\",\n  \"price\": 109,\n  \"quantity\": 777\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f4d1f316-6eca-4a2c-9d5e-f45fd394622a",
+            "colId": "39ffd045-4858-4511-afe0-1a4f78c5b3ff",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3001/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-28T03:29:30.262Z",
+            "modified": "2024-07-28T05:26:16.916Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"adminpassword\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f7f6131b-108b-491f-bafe-0edf03d303f6",
+            "colId": "39ffd045-4858-4511-afe0-1a4f78c5b3ff",
+            "containerId": "",
+            "name": "edit product",
+            "url": "http://localhost:3002/11",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-07-28T05:21:12.194Z",
+            "modified": "2024-07-28T05:25:06.938Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMTQ0MDA4LCJleHAiOjE3MjIyMzA0MDh9.y0-62zIkNy0QrFLMGMCOEgyAzu0jsIiy5rwv7jhk5TA"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"code\": \"P334\",\n  \"description\": \"Producto 44z\",\n  \"price\": 10449,\n  \"quantity\": 777\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "5ce264eb-c1ca-4827-abe5-935b1d3b3f70",
+            "colId": "39ffd045-4858-4511-afe0-1a4f78c5b3ff",
+            "containerId": "",
+            "name": "delete product",
+            "url": "http://localhost:3002/10",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-07-28T05:22:23.837Z",
+            "modified": "2024-07-28T05:23:09.097Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMTQ0MDA4LCJleHAiOjE3MjIyMzA0MDh9.y0-62zIkNy0QrFLMGMCOEgyAzu0jsIiy5rwv7jhk5TA"
+                }
+            ]
+        },
+        {
+            "_id": "0103cec8-b02c-4b3d-9ad2-ba9f05cbf7ff",
+            "colId": "39ffd045-4858-4511-afe0-1a4f78c5b3ff",
+            "containerId": "",
+            "name": "change rol",
+            "url": "http://localhost:3001/change-role",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-07-28T05:25:23.313Z",
+            "modified": "2024-07-28T05:27:49.886Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMTQ0Mzc2LCJleHAiOjE3MjIyMzA3NzZ9.FJ-bfrtaC1iLhMLyxt4FVqk1ulUP0Fuq_TE1-CxOr7w"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\": 3,\n  \"newRole\": \"admin\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "IzP6b394IM0t3H8bVjXZvYq1vB39Wj2rVbKVtg6nAXgtioI4GwgASpr-DnkoJhrSHd8upDFp7BPCphaMXBMzLQ"
+}
